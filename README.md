@@ -7,7 +7,7 @@ Install these prerequisites:
 2. Install Maven 3.5+ (https://maven.apache.org/download.cgi)
 
 ## Step 1. Clone the project
-`git clone {}`
+`git clone https://github.com/Morpheuslabs-io/waves-dapp-sample-01`
 
 ## Step 2. Update configuration
 Open file `src\main\resources\application.properties`
@@ -18,7 +18,7 @@ Open file `src\main\resources\application.properties`
 ## Step 3. Run app
 
 ```
-cd {}
+cd waves-dapp-sample-01
 mvn clean spring-boot:run` to run application
 ```
 
