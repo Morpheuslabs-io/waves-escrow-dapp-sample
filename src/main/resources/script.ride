@@ -1,0 +1,12 @@
+{-# STDLIB_VERSION 3 #-}
+{-# CONTENT_TYPE DAPP #-}
+{-# SCRIPT_TYPE ACCOUNT #-}
+
+let buyerPubKey  = base58'AGRAhCD5rJUQDG6mE54voaE4et8bdRu6kAenyfPyM6SB';
+let sellerPubKey = base58'3aRpjNJvuSodTHFwTAUvWfFxtyp4N2UJqbh2baigr2Dx';
+let escrowPubKey = base58'HtCXHUxdDgZvm24mkKvHymB6aRBNwgwAAYUhaAaG1yXL';
+let buyerSigned = if(sigVerify(tx.bodyBytes, tx.proofs[0], buyerPubKey)) then 1 else 0;
+let sellerSigned = if(sigVerify(tx.bodyBytes, tx.proofs[1], sellerPubKey)) then 1 else 0;
+let escrowSigned = if(sigVerify(tx.bodyBytes, tx.proofs[2], escrowPubKey)) then 1 else 0;
+
+buyerSigned + sellerSigned + escrowSigned >= 2
