@@ -1,7 +1,3 @@
-{-# STDLIB_VERSION 3 #-}
-{-# CONTENT_TYPE DAPP #-}
-{-# SCRIPT_TYPE ACCOUNT #-}
-
 let buyerPubKey  = base58'AGRAhCD5rJUQDG6mE54voaE4et8bdRu6kAenyfPyM6SB';
 let sellerPubKey = base58'3aRpjNJvuSodTHFwTAUvWfFxtyp4N2UJqbh2baigr2Dx';
 let escrowPubKey = base58'HtCXHUxdDgZvm24mkKvHymB6aRBNwgwAAYUhaAaG1yXL';
