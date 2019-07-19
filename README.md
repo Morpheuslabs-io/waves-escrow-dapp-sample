@@ -83,6 +83,7 @@ Now we will deploy escrow dapp script to this account.
 
 
 After the deployment, you can open the explorer to check the script is attached to the account.
+
 <img src="img/explorer.png" alt="explorer"/>
 
 ## Step 5. Integrate with smart contract with WaveJ API
