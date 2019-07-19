@@ -31,7 +31,7 @@ After creating the account, there is no any waves token yet in the account. We w
 
 ### Retrieve Info of Genesis Account
 
-Then, Open Wave BlockChain Ops on ML BPaaS and click on retrieve button to get genesis account info, copy "seed" info for later usage.
+Then, Open Waves private network from BlockChain Ops on ML BPaaS and click on retrieve button to get genesis account info, copy "seed" info for later usage.
 <img src="img/blockchainInfo.png" alt="Blockchain Info"/>
 
 ### Connect Ride IDE to Private Waves Node on ML BPaaS
