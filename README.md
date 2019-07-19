@@ -32,6 +32,7 @@ After creating the account, there is no any waves token yet in the account. We w
 ### Retrieve Info of Genesis Account
 
 Then, Open Waves private network from BlockChain Ops on ML BPaaS and click on retrieve button to get genesis account info, copy "seed" info for later usage.
+
 <img src="img/blockchainInfo.png" alt="Blockchain Info"/>
 
 ### Connect Ride IDE to Private Waves Node on ML BPaaS
@@ -78,7 +79,7 @@ Now we will deploy escrow dapp script to this account.
 - Click on Deploy Account Script button
 - Click Add sign button to sign for transaction
 - And then final click on publish to deploy contract.
-<img src="img/deploy-contract.png" alt="transfer"/>
+
 
 After the deployment, you can open the explorer to check the script is attached to the account.
 <img src="img/explorer.png" alt="explorer"/>
