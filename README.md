@@ -39,6 +39,7 @@ Then, Open Waves private network from BlockChain Ops on ML BPaaS and click on re
 
 Next, let configure Ride IDE to connect to our blockchain ops. Click on setting icon and click add node with 
 External RPC URL from blockchain ops.
+
 <img src="img/ride-config.png" alt="Blockchain Info"/>
 
 ## Step 3. Send Waves token
