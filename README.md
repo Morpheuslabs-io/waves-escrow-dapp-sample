@@ -43,8 +43,7 @@ Then, Open Waves private network from BlockChain Ops on ML BPaaS and click on re
 
 ### Connect Ride IDE to Private Waves Node on ML BPaaS
 
-Next, let configure Ride IDE to connect to our blockchain ops. Click on setting icon and click add node with 
-External RPC URL from blockchain ops.
+Next, lets configure Ride IDE to connect to a Waves private network on ML BPaaS. Click on setting icon, you can see a custom node has been automatically created, just ensure it is the default node for the Waves IDE as seen in the diagram below.
 
 <img src="img/ride-config.png" alt="Blockchain Info"/>
 
@@ -75,7 +74,11 @@ const result = await broadcast(signedTx)
 
 ```
 
-Replace the value of "recipient" with your newly created account address, then copy and paste the codes to Ride console, and then Enter to run the script. After running the codes, you will get a transaction Id as shown in the screenshot below. Wait for a while to see the waves token available in your account.
+Replace the value of "recipient" with your newly created account address, then copy and paste the codes to Ride console, and then Enter to run the script. Note that you may need to Type a space in order to show the result of running the script. This may be a bug in this version of the Waves IDE.
+
+After running the codes, you will get a transaction Id as shown in the screenshot below. Wait for a while to see the waves token available in your account.
+
+
 <img src="img/transfer.png" alt="transfer"/>
 
 ## Step 4. Deploy dAppp Script (smart contract)
