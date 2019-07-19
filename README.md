@@ -18,8 +18,8 @@ In the solution, the money is not sent directly to the escrow service’s addres
 Open a server tab in the terminal, and then click on waves-ide link to open Ride IDE
 <img src="img/open-ide.png" alt="Ride IDE"/>
 
-### 
-Lets generate a new account in order to attach dapp scripts later, by clicking generate new account.
+### Generate New Account
+Lets generate a new account in order to attach dapp scripts later, by clicking "Add Account", then "Generate new account" in the Ride IDE.
 <img src="img/ride-ide.png" alt="Ride IDE"/>
 
 After creating the account, there is no any waves token yet in the account. We will send some waves tokens to the account from the genesis account later.
