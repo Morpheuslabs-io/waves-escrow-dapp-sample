@@ -92,7 +92,7 @@ Now we will deploy the escrow dapp script using the newly created account in the
 - And then click on publish button to deploy the script (smart contract)
 
 
-After the deployment, you can open the explorer to confirm if the script has been attached to the account.
+After the deployment, you can open the Waves explorer (from your Waves private network on ML BPaaS) to confirm if the script has been attached to the account. 0.01 waves has been deducted from your account that has been used for the deployment of the smart contract and a transaction has been recorded in a block.
 
 <img src="img/explorer.png" alt="explorer"/>
 
