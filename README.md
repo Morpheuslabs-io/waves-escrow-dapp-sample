@@ -52,7 +52,7 @@ const seed = "FwGv7haZrYD5vNSmhYbmBg76fhyGCTatObCKiR3lxnHQVbA9EouYA0Hq4pLNmw7heF
 // recipient is your account address
 // amount is total waves toekn that to send = waves*10^8
 const txo = {
-"type"4,
+"type":4,
 "senderPublicKey":"AGRAhCD5rJUQDG6mE54voaE4et8bdRu6kAenyfPyM6SB",
 "recipient":'3FQ5tmDWAnQkkMNeWy8gYPBBqGy3XUSM7aE', 
 "amount": 1000000000 
