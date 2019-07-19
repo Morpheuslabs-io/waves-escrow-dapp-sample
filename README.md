@@ -83,15 +83,16 @@ After running the codes, you will get a transaction Id as shown in the screensho
 
 ## Step 4. Deploy dAppp Script (smart contract)
 
-Now we will deploy escrow dapp script to this account.
+Now we will deploy the escrow dapp script using the newly created account in the Waves IDE.
+
 - Create dapp script by clicking on (+) icon and select dapp script
 - Open file `src/main/resources/script.ride` and copy / paste it to Ride IDE
 - Click on Deploy Account Script button
-- Click Add sign button to sign for transaction
-- And then final click on publish to deploy contract.
+- Click Add sign button to sign the transaction
+- And then click on publish button to deploy the script (smart contract)
 
 
-After the deployment, you can open the explorer to check the script is attached to the account.
+After the deployment, you can open the explorer to confirm if the script has been attached to the account.
 
 <img src="img/explorer.png" alt="explorer"/>
 
