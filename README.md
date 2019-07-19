@@ -8,9 +8,9 @@ Should the buyer trust the seller and pay before receiving the goods? Should the
 
 In the solution, the money is not sent directly to the escrow service’s address, but instead, it is sent to a 2-of-3 multisig address with one key controlled by each of the transacting parties and one controlled by the mediator. When there is no dispute, the two transacting parties can create together the transfer transaction. Only if there is a dispute the mediator will get involved, collaborating with either the buyer or seller (as appropriate) to redeem the funds.
 
-Refer to https://docs.morpheuslabs.io/docs for more detailed information about ML BPaaS.
+The steps below will show how to expore and run the Waves Escrow dApp on Morpheus Labs BPaaS platform (ML BPaaS).
 
-The steps below show how to expore and run the Waves Escrow dApp on Morpheus Labs BPaaS platform (ML BPaaS).
+Refer to https://docs.morpheuslabs.io/docs for more detailed information about ML BPaaS.
 
 ## Step 1. Clone the project
 `git clone https://github.com/Morpheuslabs-io/waves-dapp-sample-01`
@@ -31,27 +31,26 @@ After creating the account, there is no any waves token yet in the account. We w
 
 ### Retrieve Info of Genesis Account
 
-Then, Open Wave BlockChain Ops on ML BPaaS and click on retrieve button to get genesis account info, copy seed for later usage.
+Then, Open Wave BlockChain Ops on ML BPaaS and click on retrieve button to get genesis account info, copy "seed" info for later usage.
 <img src="img/blockchainInfo.png" alt="Blockchain Info"/>
 
-### Connect Ride IDE to Private Waves Node
+### Connect Ride IDE to Private Waves Node on ML BPaaS
 
 Next, let configure Ride IDE to connect to our blockchain ops. Click on setting icon and click add node with 
 External RPC URL from blockchain ops.
 <img src="img/ride-config.png" alt="Blockchain Info"/>
 
-## Step 3. Send Waves and deploy contract script
+## Step 3. Send Waves token
 
-After finish configuration, it's time to make some transactions.
-Ok, now we send some waves to new account we just created, unfortunately, waves does not provide wallet for development network yes, so we need to use some Ride Console and javascript to do it.
+Now we send some waves token to the new account that we just created. Unfortunately, Waves does not provide wallet for development network yet, so we need to use Ride Console with avascript to do it.
 
 ```javascript
 // the seed you just copy above
 const seed = "FwGv7haZrYD5vNSmhYbmBg76fhyGCTatObCKiR3lxnHQVbA9EouYA0Hq4pLNmw7heFbwSJqe9H24uv3XFoID19JWsn8A6Wc2daMo"
 
 // let define transaction object with 10 waves, we send from genesis account 
-// recipient is your account address you just create
-// amount is total waves need to send = waves*10^8
+// recipient is your account address
+// amount is total waves toekn that to send = waves*10^8
 const txo = {
 "type"4,
 "senderPublicKey":"AGRAhCD5rJUQDG6mE54voaE4et8bdRu6kAenyfPyM6SB",
@@ -68,37 +67,47 @@ const result = await broadcast(signedTx)
 
 ```
 
-Copy and paste these codes to Ride console, after run code, we get transaction Id, wait little bit to see waves available on your account.
+Copy and paste the codes to Ride console, after running the codes, we will get a transaction Id, wait a while to see the waves token available in your account.
 <img src="img/transfer.png" alt="transfer"/>
+
+## Step 4. Deploy dAppp Script (smart contract)
 
 Now we will deploy escrow dapp script to this account.
 - Create dapp script by clicking on (+) icon and select dapp script
-- Open file `src/main/resources/script.ride` and past it to Ride IDE
+- Open file `src/main/resources/script.ride` and copy / paste it to Ride IDE
 - Click on Deploy Account Script button
 - Click Add sign button to sign for transaction
 - And then final click on publish to deploy contract.
 <img src="img/deploy-contract.png" alt="transfer"/>
 
-After finish deploy you can check on explorer script is attached to account, script tab.
+After the deployment, you can open the explorer to check the script is attached to the account.
 <img src="img/explorer.png" alt="explorer"/>
 
-## Step 4. Integrate with smart account with WaveJ API
- 
+## Step 4. Integrate with smart contract with WaveJ API
+
+See how to have a Springboot based Java applicaiton to interact with Waves smart contracts.
+
+### Exploer the Java application
+
+Open the workspace that contrains the Escrow dApp and use the CDE to exploer the Java application.
 
 ### Update configuration
-Open file `src\main\resources\application.properties`
+
+From the CDE, open the Springboot configuration file `src\main\resources\application.properties`
 - Update NODE_URL field to your node url
 - Update BUYER_PK with correct private key of address with some waves in it
 - Update BUYER_PK with correct private key of address with some waves in it
 
-## Run app
+## Step 5. Run Escrow dApp
+
+Open a terminal in the CDE to run the application.
 
 ```
 cd waves-dapp-sample-01
 mvn clean spring-boot:run` to run application
 ```
 
-If you view java code you can see, withdraw transaction is sign by both buyer and seller, if there is only one signature, transaction could not make.
+From the java code, you can see that withdraw transaction needs to be signed by both buyer and seller, if there is only one signature, the transaction would not be done.
 
 ```java
 
