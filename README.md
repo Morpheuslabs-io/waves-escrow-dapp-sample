@@ -67,7 +67,7 @@ const result = await broadcast(signedTx)
 
 ```
 
-Copy and paste the codes to Ride console, after running the codes, we will get a transaction Id, wait a while to see the waves token available in your account.
+Copy and paste the codes to Ride console, replace the value of "recipient" with your newly created account address. After running the codes, you will get a transaction Id, wait a while to see the waves token available in your account.
 <img src="img/transfer.png" alt="transfer"/>
 
 ## Step 4. Deploy dAppp Script (smart contract)
