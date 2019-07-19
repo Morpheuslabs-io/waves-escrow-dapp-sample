@@ -8,6 +8,8 @@ Should the buyer trust the seller and pay before receiving the goods? Should the
 
 In the solution, the money is not sent directly to the escrow service’s address, but instead, it is sent to a 2-of-3 multisig address with one key controlled by each of the transacting parties and one controlled by the mediator. When there is no dispute, the two transacting parties can create together the transfer transaction. Only if there is a dispute the mediator will get involved, collaborating with either the buyer or seller (as appropriate) to redeem the funds.
 
+The steps below show how to expore and run the Waves Escrow dApp on Morpheus Labs BPaaS platform (ML BPaaS).
+
 ## Step 1. Clone the project
 `git clone https://github.com/Morpheuslabs-io/waves-dapp-sample-01`
 
@@ -25,8 +27,12 @@ Lets generate a new account in order to attach dapp scripts later, by clicking "
 After creating the account, there is no any waves token yet in the account. We will send some waves tokens to the account from the genesis account later.
 <img src="img/ride-account.png" alt="Ride account"/>
 
-Then, Open Wave BlockChain Ops and click on retrieve button to get genesis account info, copy seed for later usage.
+### Retrieve Info of Genesis Account
+
+Then, Open Wave BlockChain Ops on ML BPaaS and click on retrieve button to get genesis account info, copy seed for later usage.
 <img src="img/blockchainInfo.png" alt="Blockchain Info"/>
+
+### Connect Ride IDE to Private Waves Node
 
 Next, let configure Ride IDE to connect to our blockchain ops. Click on setting icon and click add node with 
 External RPC URL from blockchain ops.
