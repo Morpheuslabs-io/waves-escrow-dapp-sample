@@ -107,7 +107,7 @@ Open the workspace that contrains the Escrow dApp and use the CDE to exploer the
 ### Update configuration
 
 From the CDE, open the Springboot configuration file `src\main\resources\application.properties`
-- Update NODE_URL field to your node url
+- Update NODE_URL field to the external url of your Waves private node on ML BPaaS
 - Update BUYER_PK with correct private key of address with some waves in it
 - Update BUYER_PK with correct private key of address with some waves in it
 
