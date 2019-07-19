@@ -83,7 +83,7 @@ Now we will deploy escrow dapp script to this account.
 After the deployment, you can open the explorer to check the script is attached to the account.
 <img src="img/explorer.png" alt="explorer"/>
 
-## Step 4. Integrate with smart contract with WaveJ API
+## Step 5. Integrate with smart contract with WaveJ API
 
 See how to have a Springboot based Java applicaiton to interact with Waves smart contracts.
 
@@ -98,7 +98,7 @@ From the CDE, open the Springboot configuration file `src\main\resources\applica
 - Update BUYER_PK with correct private key of address with some waves in it
 - Update BUYER_PK with correct private key of address with some waves in it
 
-## Step 5. Run Escrow dApp
+## Step 6. Run Escrow dApp
 
 Open a terminal in the CDE to run the application.
 
