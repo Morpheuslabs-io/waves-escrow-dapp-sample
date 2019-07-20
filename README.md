@@ -109,6 +109,7 @@ Open the workspace that contrains the Escrow dApp and use the CDE to exploer the
 From the CDE, open the Springboot configuration file `src\main\resources\application.properties`
 - Update NODE_URL field to the internal url of your Waves private node on ML BPaaS
 - Update BUYER_PRIVATEKEY with correct private key of address with some waves in it to make buy request, could use genesis account
+- Update SELLER_SEED or ESCROW_SEED if you want to use new account as SELLER and ESCROW.
 
 ## Step 6. Run Escrow dApp
 
@@ -150,4 +151,9 @@ tx1 = tx1.withProof(2, escrowSig);
 node.send(tx1);
 
 ```
+
+In code, I configured two seeds for SELLER and ESCROW accounts (escrow account is account with script attached to it to do escrow service)
+You could get ESCROW_SEED from account you generated at step 2 to update it in application.properties file.
+
+For Seller SEED, you can just generate new account and get the seed and then update it in application.properties file also.
 
