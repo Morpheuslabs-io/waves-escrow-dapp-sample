@@ -123,7 +123,6 @@ Open a terminal in the CDE to run the application.
 cd waves-dapp-sample-01
 mvn clean spring-boot:run
 ```
-to run application
 
 From the java code, you can see that withdraw transaction needs to be signed by both buyer and seller, if there is only one signature, the transaction would not be done.
 
