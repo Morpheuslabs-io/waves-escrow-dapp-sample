@@ -12,6 +12,8 @@ The steps below will show how to expore and run the Waves Escrow dApp on Morpheu
 
 Refer to https://docs.morpheuslabs.io/docs for more detailed information about ML BPaaS.
 
+This video provides a overview about Waves blockchain: https://docs.wavesplatform.com/en/smart-contracts/video-tutorials/introduction-to-the-waves-blockchain-waves-smart-accounts-and-waves-smart-assets.html
+
 Refer to https://docs.wavesplatform.com/en/smart-contracts/writing-dapps.html for Waves smart contract development using Waves IDE.
 
 ## Step 1. Clone the project
