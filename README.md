@@ -30,11 +30,11 @@ Open a server tab in the terminal, then click on waves-ide link to open Ride IDE
 
 ### Prepare Accounts to run the dApp
 
-Create two new accounts one for seller and another for buyer.
+Create two new accounts one for escrow and another for seller.
 
-We will use the genesis account for Escrow.
+We will use the genesis account for buyer.
 
-From Ride IDE, generate a new account (buyer) in order to attach dapp scripts to it later, by clicking "Add Account", then "Generate new account".
+From Ride IDE, generate a new account (Escrow) in order to attach dapp scripts to it later to provide escrow service, by clicking "Add Account", then "Generate new account".
 
 
 <img src="img/ride-ide.png" alt="Ride IDE"/>
