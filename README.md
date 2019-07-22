@@ -28,8 +28,13 @@ Open a server tab in the terminal, then click on waves-ide link to open Ride IDE
 
 <img src="img/open-ide.png" alt="Ride IDE"/>
 
-### Generate New Account
-From Ride IDE, generate a new account in order to attach dapp scripts to it later, by clicking "Add Account", then "Generate new account".
+### Prepare Accounts to run the dApp
+
+Create two new accounts one for seller and another for buyer.
+
+We will use the genesis account for Escrow.
+
+From Ride IDE, generate a new account (buyer) in order to attach dapp scripts to it later, by clicking "Add Account", then "Generate new account".
 
 
 <img src="img/ride-ide.png" alt="Ride IDE"/>
@@ -38,6 +43,8 @@ After creating the account, there is no any waves token yet in the account. We w
 
 
 <img src="img/ride-account.png" alt="Ride account"/>
+
+Repeat the above to generate another new account for seller.
 
 ### Retrieve Info of Genesis Account
 
