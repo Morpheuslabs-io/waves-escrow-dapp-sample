@@ -78,7 +78,7 @@ const result = await broadcast(signedTx)
 
 ```
 
-Replace the value of "recipient" with your newly created account address, then copy and paste the codes to Ride console, and then Enter to run the script. Note that you may need to Type a space in order to show the result of running the script. This may be a bug in this version of the Waves IDE.
+Replace the value of "recipient" with your newly created account address, then copy and paste the codes to Ride console, and then Enter to run the script. Note that you may need to type a space in order to show the result of running the script. This may be a bug in this version of the Waves IDE.
 
 After running the codes, you will get a transaction Id as shown in the screenshot below. Wait for a while to see the waves token available in your account.
 
