@@ -23,13 +23,13 @@ Refer to https://docs.wavesplatform.com/en/smart-contracts/writing-dapps.html fo
 
 ### Open Ride IDE
 
-Open a server tab in the terminal, and then click on waves-ide link to open Ride IDE
+Open a server tab in the terminal, then click on waves-ide link to open Ride IDE
 
 
 <img src="img/open-ide.png" alt="Ride IDE"/>
 
 ### Generate New Account
-Lets generate a new account in order to attach dapp scripts later, by clicking "Add Account", then "Generate new account" in the Ride IDE.
+From Ride IDE, generate a new account in order to attach dapp scripts to it later, by clicking "Add Account", then "Generate new account".
 
 
 <img src="img/ride-ide.png" alt="Ride IDE"/>
