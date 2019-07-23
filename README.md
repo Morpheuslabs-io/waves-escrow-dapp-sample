@@ -119,8 +119,8 @@ Open the workspace that contrains the Escrow dApp and use the CDE to exploer the
 
 From the CDE, open the Springboot configuration file `src\main\resources\application.properties`
 - Update NODE_URL field to the internal url of your Waves private node on ML BPaaS
-- Update BUYER_PRIVATEKEY with correct private key of address with some waves in it to make buy request, could use genesis account
-- Update SELLER_SEED or ESCROW_SEED if you want to use new account as SELLER and ESCROW.
+- Update BUYER_PRIVATEKEY with correct private key of address with some waves in it to make buy request (default I used genesis account as buyer so no need to update if you don't want)
+- Update ESCROW_SEED if you want to use ESCROW account as a signature (default SELLER is as one signature, no need escrow account) 
 
 ## Step 6. Run Escrow dApp
 
@@ -130,6 +130,9 @@ Open a terminal in the CDE to run the application.
 cd waves-dapp-sample-01
 mvn clean spring-boot:run
 ```
+You can see out as below, check seller account, you will see money is withdraw to his account.
+<img src="img/jescrow.png" alt="out log"/>
+<img src="img/seller.png" alt="Seller account"/>
 
 From the java code, you can see that withdraw transaction needs to be signed by both buyer and seller, if there is only one signature, the transaction would not be done.
 

@@ -41,6 +41,8 @@ public class CmdApplicationRunner implements CommandLineRunner{
 	@Value("${SMART_ACCOUNT_PUBLIC_KEY}")
 	private String smartAccountPublicKey;
 	
+	private Long transactionAmount = Long.valueOf("1000000000");
+	
 	@Override
     public void run(String... args) throws IOException, URISyntaxException {
         LOG.info("Starting Escrow smart contract demo");
@@ -61,15 +63,26 @@ public class CmdApplicationRunner implements CommandLineRunner{
         String buyerAddress = buyer.getAddress();
         String sellerAddress = seller.getAddress();
         
+        Long balanceBefore = node.getBalance(smartAccount.getAddress());
+        
         // Buyer make a transfer
         LOG.info("Buyer sell money and request for goods, example 10 waves");
-        Transaction buyTx = Transaction.makeTransferTx(buyer, smartAccount.getAddress(), 1000000000,"WAVES", fee * 4 ,"WAVES", "Sending Money");
+        Transaction buyTx = Transaction.makeTransferTx(buyer, smartAccount.getAddress(), transactionAmount,"WAVES", fee * 4 ,"WAVES", "Sending Money");
         String sendingTX = node.send(buyTx);
         LOG.info("Transaction Id: {}", sendingTX);
         
+        Long balanceAfter = node.getBalance(smartAccount.getAddress());
+        while(balanceAfter >= (balanceBefore + transactionAmount)) {
+        	try {
+				Thread.sleep(2000);
+				balanceAfter = node.getBalance(smartAccount.getAddress());
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+        }
         
         LOG.info("Seller request withraw money");
-        Transaction tx1 = Transaction.makeTransferTx(smartAccount, sellerAddress, 1000000000,"WAVES", fee * 4 ,"WAVES", "Sending Money");
+        Transaction tx1 = Transaction.makeTransferTx(smartAccount, sellerAddress, transactionAmount,"WAVES", fee * 4 ,"WAVES", "Withdraw Money");
 
         //Buyer and Seller sign the deal with proofs
         String buyerSig =  buyer.sign(tx1);
