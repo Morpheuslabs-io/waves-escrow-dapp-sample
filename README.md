@@ -30,9 +30,11 @@ Open a server tab in the terminal, then click on waves-ide link to open Ride IDE
 
 ### Prepare Accounts to run the dApp
 
-Create two new accounts one for escrow and another for seller.
+Prepare the following accounts to run the dapp:
 
-We will use the genesis account for buyer.
+- Use the genesis account in your private waves node as buyer account.
+- Use the seller account (a constant seed value) in the application.properties file.
+- Create a new account in Ride IDE as escrow account that to run the escrow smart contract.
 
 From Ride IDE, generate a new account (Escrow) in order to attach dapp scripts to it later to provide escrow service, by clicking "Add Account", then "Generate new account".
 
@@ -44,7 +46,6 @@ After creating the account, there is no any waves token yet in the account. We w
 
 <img src="img/ride-account.png" alt="Ride account"/>
 
-Repeat the above to generate another new account for seller.
 
 ### Retrieve Info of Genesis Account
 
@@ -60,7 +61,7 @@ Next, lets configure Ride IDE to connect to a Waves private network on ML BPaaS.
 
 ## Step 3. Send Waves token
 
-Now we send some waves token to the new account that we just created. Unfortunately, Waves does not provide wallet for development network yet, so we need to use Ride Console with javascript to do it.
+Now we send some waves token from the generis account to the new account that we just created. Unfortunately, Waves does not provide wallet for development network yet, so we need to use Ride Console with javascript to do it.
 
 ```javascript
 // the seed you just copy above
@@ -131,7 +132,7 @@ Open a terminal in the CDE to run the application.
 cd waves-dapp-sample-01
 mvn clean spring-boot:run
 ```
-You can see out as below, check seller account, you will see money is withdraw to his account.
+You can see the output as below, then check the seller account, you will see more waves has been transferred to the buyer account.
 <img src="img/jescrow.png" alt="out log"/>
 <img src="img/seller.png" alt="Seller account"/>
 
@@ -167,8 +168,9 @@ node.send(tx1);
 
 ```
 
-In code, I configured two seeds for SELLER and ESCROW accounts (escrow account is account with script attached to it to do escrow service)
-You could get ESCROW_SEED from account you generated at step 2 to update it in application.properties file.
+In code, I configured two seeds for SELLER and ESCROW accounts. The escrow account is the account with script attached to it to do escrow service)
 
-For Seller SEED, you can just generate new account and get the seed and then update it in application.properties file also.
+You could get ESCROW_SEED from the account you generated at step 2 to update it in application.properties file.
+
+For Seller SEED, you can just generate another new account and get the seed and then update it in application.properties file also.
 
