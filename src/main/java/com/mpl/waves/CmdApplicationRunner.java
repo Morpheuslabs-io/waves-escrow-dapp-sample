@@ -29,8 +29,8 @@ public class CmdApplicationRunner implements CommandLineRunner{
 	@Value ("${FEE}")
 	private Long fee;
 	
-	@Value("${BUYER_PRIVATEKEY}")
-	private String BUYER_PRIVATEKEY;
+	@Value("${BUYER_SEED}")
+	private String BUYER_SEED;
 	
 	@Value("${SELLER_SEED}")
 	private String SELLER_SEED;
@@ -52,7 +52,7 @@ public class CmdApplicationRunner implements CommandLineRunner{
         PublicKeyAccount smartAccount = new PublicKeyAccount(smartAccountPublicKey, (byte)NETWORK_BYTE);
 
         //Get Private keys
-        PrivateKeyAccount buyer = PrivateKeyAccount.fromPrivateKey(BUYER_PRIVATEKEY, (byte)NETWORK_BYTE);
+        PrivateKeyAccount buyer = PrivateKeyAccount.fromSeed(BUYER_SEED, 0, (byte)NETWORK_BYTE);
         PrivateKeyAccount seller = PrivateKeyAccount.fromSeed(SELLER_SEED, 0, (byte)NETWORK_BYTE);
         PrivateKeyAccount escrow = PrivateKeyAccount.fromSeed(ESCROW_SEED,0, (byte)NETWORK_BYTE);
 
