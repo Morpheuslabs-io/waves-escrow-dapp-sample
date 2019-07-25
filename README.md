@@ -32,10 +32,9 @@ Open a server tab in the terminal, then click on waves-ide link to open Ride IDE
 
 Prepare the following accounts to run the dapp:
 
---dsds--
-Create two new accounts one for escrow and another for seller.
-
-We will use the genesis account (that is in the waves private node) for buyer.
+- Use the genesis account in your private waves node as buyer account.
+- Use the seller account (a constant seed value) in the application.properties file.
+- Create a new account in Ride IDE as escrow account that to run the escrow smart contract.
 
 From Ride IDE, generate a new account (Escrow) in order to attach dapp scripts to it later to provide escrow service, by clicking "Add Account", then "Generate new account".
 
