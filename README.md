@@ -30,6 +30,9 @@ Open a server tab in the terminal, then click on waves-ide link to open Ride IDE
 
 ### Prepare Accounts to run the dApp
 
+Prepare the following accounts to run the dapp:
+
+*dsds*
 Create two new accounts one for escrow and another for seller.
 
 We will use the genesis account (that is in the waves private node) for buyer.
