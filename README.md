@@ -46,7 +46,6 @@ After creating the account, there is no any waves token yet in the account. We w
 
 <img src="img/ride-account.png" alt="Ride account"/>
 
-Repeat the above to generate another new account for seller.
 
 ### Retrieve Info of Genesis Account
 
