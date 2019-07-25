@@ -32,7 +32,7 @@ Open a server tab in the terminal, then click on waves-ide link to open Ride IDE
 
 Create two new accounts one for escrow and another for seller.
 
-We will use the genesis account for buyer.
+We will use the genesis account (that is in the waves private node) for buyer.
 
 From Ride IDE, generate a new account (Escrow) in order to attach dapp scripts to it later to provide escrow service, by clicking "Add Account", then "Generate new account".
 
