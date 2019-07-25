@@ -60,7 +60,7 @@ Next, lets configure Ride IDE to connect to a Waves private network on ML BPaaS.
 
 ## Step 3. Send Waves token
 
-Now we send some waves token to the new account that we just created. Unfortunately, Waves does not provide wallet for development network yet, so we need to use Ride Console with javascript to do it.
+Now we send some waves token from the generis account to the new account that we just created. Unfortunately, Waves does not provide wallet for development network yet, so we need to use Ride Console with javascript to do it.
 
 ```javascript
 // the seed you just copy above
