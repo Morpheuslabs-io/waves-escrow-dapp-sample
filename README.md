@@ -113,7 +113,7 @@ buyerSigned + sellerSigned + escrowSigned >= 2
 ```
 
 - Create dapp script by clicking on (+) icon and select dapp script
-- Open file `src/main/resources/script.ride` in CDE and copy / paste it to Ride IDE
+- Open the file `src/main/resources/script.ride` (smart contract script) in CDE and copy / paste it to Ride IDE
 - Click on Deploy Account Script button
 - Click Add sign button to sign the transaction
 - And then click on publish button to deploy the script (smart contract)
