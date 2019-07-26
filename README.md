@@ -163,6 +163,8 @@ Open a terminal in the CDE to run the application.
 cd /projects/waves-escrow-dapp-sample
 mvn clean spring-boot:run
 ```
+It may take few minutes for maven to download the dependencies to run the springboot java app.
+
 You can see the output as below, then check the seller account, you will see more waves has been transferred to the buyer account.
 <img src="img/jescrow.png" alt="out log"/>
 <img src="img/seller.png" alt="Seller account"/>
