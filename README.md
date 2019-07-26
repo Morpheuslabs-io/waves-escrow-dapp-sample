@@ -133,11 +133,15 @@ Open the workspace that contrains the Escrow dApp and use the CDE to exploer the
 
 ### Update configuration
 
-From the CDE, open the Springboot configuration file `src\main\resources\application.properties`
+From the CDE, open the Springboot configuration file `src\main\resources\application.properties`, then update the following:
+
 - Update NODE_URL field to the internal url of your Waves private node on ML BPaaS
-- Update BUYER_SEED with correct private key of address with some waves in it to make buy request (default I used genesis account as buyer so no need to update if you don't want to use new one)
-- Update SELLER_SEED with correct your seller seed account (default I configured seed and seller public key in script is the same account, if you want to change to new seller account need update both seed value in `src\main\resources\application.properties` and `let sellerPubKey = base58'3aRpjNJvuSodTHFwTAUvWfFxtyp4N2UJqbh2baigr2Dx';` in script)
-- Update ESCROW_SEED if you want to use ESCROW account as a signature (default SELLER is as one signature, no need escrow account) 
+- Update SMART_ACCOUNT_PUBLIC_KEY to the public key of the newly created account (escrow account)
+
+Note that seeds for BUYER and SELLER have already been configured in the property file to use the genesis account for the buyer and an existing account for the seller, so no change is required. As per the default logic in the dApp client code, only the buyer and the sellet need to sign a transaction, so escrow is not required to sign the signature, so the escrow SEED value is ignore and no change it required. Now you can go to the next step to run the dApp client.
+
+You only need to update the SEED info in the property file, if you are using different accounts for the buyer, the seller, or you want the escrow to sign the transaction as well.
+
 
 ## Step 6. Run Escrow dApp
 
