@@ -138,6 +138,18 @@ From the CDE, open the Springboot configuration file `src\main\resources\applica
 - Update NODE_URL field to the internal url of your Waves private node on ML BPaaS
 - Update SMART_ACCOUNT_PUBLIC_KEY to the public key of the newly created account (escrow account)
 
+```
+#Configuration
+# Network url
+NODE_URL=http://bops-t.morpheuslabs.io:27877
+#main net W, testnet T, custom net D
+NETWORK_BYTE=D
+
+
+#smart contract account
+SMART_ACCOUNT_PUBLIC_KEY=G9SxW9UEnh37L4yQmwcQJrJx1ehdZCdR6LrMJG2TNjVK
+```
+
 Note that seeds for BUYER and SELLER have already been configured in the property file to use the genesis account for the buyer and an existing account for the seller, so no change is required. As per the default logic in the dApp client code, only the buyer and the sellet need to sign a transaction, so escrow is not required to sign the signature, so the escrow SEED value is ignore and no change it required. Now you can go to the next step to run the dApp client.
 
 You only need to update the SEED info in the property file, if you are using different accounts for the buyer, the seller, or you want the escrow to sign the transaction as well.
