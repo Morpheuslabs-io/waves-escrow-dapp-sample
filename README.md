@@ -152,6 +152,8 @@ SMART_ACCOUNT_PUBLIC_KEY=G9SxW9UEnh37L4yQmwcQJrJx1ehdZCdR6LrMJG2TNjVK
 
 Note that seeds for BUYER and SELLER have already been configured in the property file to use the genesis account for the buyer and an existing account for the seller, so no change is required. As per the default logic in the dApp client code, only the buyer and the sellet need to sign a transaction, so escrow is not required to sign the signature, so the escrow SEED value is ignore and no change it required. Now you can go to the next step to run the dApp client.
 
+You could get ESCROW_SEED from the account you generated at step 2 to update it in application.properties file. For Seller SEED, you can just generate another new account and get the seed and then update it in application.properties file also.
+
 You only need to update the SEED info in the property file, if you are using different accounts for the buyer, the seller, or you want the escrow to sign the transaction as well.
 
 
@@ -164,6 +166,8 @@ cd /projects/waves-escrow-dapp-sample
 mvn clean spring-boot:run
 ```
 It may take few minutes for maven to download the dependencies to run the springboot java app.
+
+From the Ride IDE, you can import Buyer and Seller accounts using their seed phrases in the application.properties file. In Account of Ride IDE, you can scrow down to see the list of all the accounts.
 
 You can see the output as below, then check the seller account, you will see more waves has been transferred to the buyer account.
 <img src="img/jescrow.png" alt="out log"/>
@@ -200,10 +204,4 @@ tx1 = tx1.withProof(2, escrowSig);
 node.send(tx1);
 
 ```
-
-In code, I configured two seeds for SELLER and ESCROW accounts. The escrow account is the account with script attached to it to do escrow service)
-
-You could get ESCROW_SEED from the account you generated at step 2 to update it in application.properties file.
-
-For Seller SEED, you can just generate another new account and get the seed and then update it in application.properties file also.
 
