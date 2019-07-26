@@ -99,6 +99,19 @@ After running the codes, you will get a transaction Id as shown in the screensho
 
 Now we will deploy the escrow dapp script using the newly created account in the Waves IDE.
 
+The below is the smart contract script that is used to set the rules of multisig. We are using existing accounts for buyer and seller in this sample, and we will try to use buyer and seller to sign the transaction, so there is no change to the script is required to deploy and run it in this sample.
+
+```
+let buyerPubKey  = base58'AGRAhCD5rJUQDG6mE54voaE4et8bdRu6kAenyfPyM6SB';
+let sellerPubKey = base58'3aRpjNJvuSodTHFwTAUvWfFxtyp4N2UJqbh2baigr2Dx';
+let escrowPubKey = base58'HtCXHUxdDgZvm24mkKvHymB6aRBNwgwAAYUhaAaG1yXL';
+let buyerSigned = if(sigVerify(tx.bodyBytes, tx.proofs[0], buyerPubKey)) then 1 else 0;
+let sellerSigned = if(sigVerify(tx.bodyBytes, tx.proofs[1], sellerPubKey)) then 1 else 0;
+let escrowSigned = if(sigVerify(tx.bodyBytes, tx.proofs[2], escrowPubKey)) then 1 else 0;
+
+buyerSigned + sellerSigned + escrowSigned >= 2
+```
+
 - Create dapp script by clicking on (+) icon and select dapp script
 - Open file `src/main/resources/script.ride` in CDE and copy / paste it to Ride IDE
 - Click on Deploy Account Script button
