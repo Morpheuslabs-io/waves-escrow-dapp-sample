@@ -18,8 +18,15 @@ This video provides a overview about Waves blockchain: https://docs.wavesplatfor
 
 Refer to https://docs.wavesplatform.com/en/smart-contracts/writing-dapps.html for Waves smart contract development using Waves IDE.
 
-## Step 1. Clone the project
-`git clone https://github.com/Morpheuslabs-io/waves-dapp-sample-01`
+## Step 1. Create a workspace for the Escrow dApp
+
+You can create a new workspace using "ML-Waves-One" developer stack and a new GitLab repo.
+
+Then start the workspace and open a terminal in CDE, then clone the escrow dapp source code.
+
+`git clone https://github.com/Morpheuslabs-io/waves-escrow-dapp-sample`
+
+Alternatively, you can directly create a workspace using the escrow repo in GitLab then start from step 2, or you can download the Escrow dapp from the App Library on ML BAppS, then create a workspace using the escrow app downloaded, and then start from step 2. To do these, you may need to be familiar with ML BPaaS.
 
 ## Step 2. Configure Ride IDE
 
