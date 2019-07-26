@@ -8,6 +8,8 @@ Should the buyer trust the seller and pay before receiving the goods? Should the
 
 In the solution, the money is not sent directly to the escrow service’s address, but instead, it is sent to a 2-of-3 multisig address with one key controlled by each of the transacting parties and one controlled by the mediator. When there is no dispute, the two transacting parties can create together the transfer transaction. Only if there is a dispute the mediator will get involved, collaborating with either the buyer or seller (as appropriate) to redeem the funds.
 
+This Escrow sample dApp consists of a Springboot Java program (the dApp client) and a smart contract (a Javascript based smart contract script).
+
 The steps below will show how to expore and run the Waves Escrow dApp on Morpheus Labs BPaaS platform (ML BPaaS).
 
 Refer to https://docs.morpheuslabs.io/docs for more detailed information about ML BPaaS.
