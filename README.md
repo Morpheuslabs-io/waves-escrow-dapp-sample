@@ -160,7 +160,7 @@ You only need to update the SEED info in the property file, if you are using dif
 Open a terminal in the CDE to run the application.
 
 ```
-cd waves-dapp-sample-01
+cd /projects/waves-escrow-dapp-sample
 mvn clean spring-boot:run
 ```
 You can see the output as below, then check the seller account, you will see more waves has been transferred to the buyer account.
