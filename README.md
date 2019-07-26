@@ -1,5 +1,7 @@
 # Waves Escrow dApp sample with waveJ API
 
+https://github.com/Morpheuslabs-io/waves-escrow-dapp-sample
+
 ## Overview
 
 This sample dApp is for buying physical goods with cryptocurrencies. 
